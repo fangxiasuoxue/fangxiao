@@ -1,0 +1,14 @@
+[Unit]
+Description=Frp Client Service
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/local/sevice/rpc -c /usr/local/sevice/rpc.ini
+ExecReload=/usr/local/sevice/rpc reload -c /usr/local/sevice/rpc.ini
+
+[Install]
+WantedBy=multi-user.target

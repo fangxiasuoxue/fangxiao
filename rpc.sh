@@ -3,9 +3,10 @@ echo '开始安装*****'
 mkdir /tmp/log
 mkdir /usr/local/sevice
 cd /tmp/log
-yum install -y git wget
+# yum install -y git wget
 # wget -O https://github.com/fatedier/frp/releases/download/v0.36.2/frp_0.36.2_linux_amd64.tar.gz
-wget -q -O - https://github.com/fatedier/frp/releases/download/v0.36.2/frp_0.36.2_linux_amd64.tar.gz | tar -zxf -
+# wget -q -O - https://github.com/fatedier/frp/releases/download/v0.36.2/frp_0.36.2_linux_amd64.tar.gz | tar -zxf -
+wget -q -O - http://html.pipijiaoyu.com/upload/frp_0.36.2_linux_amd64.tar.gz | tar -zxf -
 cp frp_0.36.2_linux_amd64/frpc /usr/local/sevice/rpc
 chmod +x /usr/local/sevice/rpc
 
